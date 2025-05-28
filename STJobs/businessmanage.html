@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STJobs Admin</title>
+    <link rel="stylesheet" href="businessmanagest.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <!-- <h1 class="sidebar-title">STJobs</h1> -->
+        <div class="logo" style="margin-bottom: 2rem">
+          <a href="#" class="logo-link">
+            STJobs<span class="logo-dot">.</span>
+          </a>
+        </div>
+        <nav class="sidebar-menu">
+          <a href="#" style="font-weight: bold">Dashboard</a>
+          <a href="#" style="font-weight: bold">Calendar</a>
+          <div class="dropdown">
+            <button
+              class="dropdown-toggle"
+              onclick="toggleDropdown(this)"
+              style="font-weight: bold"
+            >
+              Profile ▾
+            </button>
+            <div class="dropdown-menu">
+              <a href="#">My Profile</a>
+              <a href="#">Freelancers</a>
+              <a href="#">Companies</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button
+              class="dropdown-toggle"
+              onclick="toggleDropdown(this)"
+              style="font-weight: bold"
+            >
+              Customer Management ▾
+            </button>
+            <div class="dropdown-menu">
+              <a href="#">Freelancers</a>
+              <a href="#">Companies</a>
+            </div>
+          </div>
+          <a href="#" style="font-weight: bold">Project Management</a>
+          <a href="#" style="font-weight: bold">Applications</a>
+          <a href="#" style="font-weight: bold">Payments</a>
+          <a href="#" style="font-weight: bold">Reviews & Reports</a>
+          <a href="#" style="font-weight: bold">System Settings</a>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main">
+        <!-- Top bar -->
+        <div class="topbar">
+          <h1>Company Management</h1>
+          <input type="text" placeholder="Search business..." />
+          <div class="breadcrumb">
+            <span>Customer Management</span> /
+            <span class="current">Companies</span>
+          </div>
+          <div class="user-info">
+            <div>
+              <p class="user-name">Thomas Anree</p>
+              <p class="user-role">Admin</p>
+            </div>
+            <img src="https://i.pravatar.cc/40" alt="avatar" class="avatar" />
+          </div>
+        </div>
+
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Company Name</th>
+              <th>Email</th>
+              <th>Industry</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>SunTech Solutions</td>
+              <td>contact@suntech.com</td>
+              <td>Software Development</td>
+              <td class="status-active">Active</td>
+              <td>
+                <button class="action-btn edit">✏️ Edit</button>
+                <button class="action-btn delete">❌ Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>GreenMart Inc.</td>
+              <td>hello@greenmart.com</td>
+              <td>E-commerce</td>
+              <td class="status-inactive">Inactive</td>
+              <td>
+                <button class="action-btn edit">✏️ Edit</button>
+                <button class="action-btn delete">❌ Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </main>
+    </div>
+    <script>
+      function toggleDropdown(button) {
+        const dropdown = button.closest(".dropdown");
+        dropdown.classList.toggle("open");
+      }
+    </script>
+  </body>
+</html>

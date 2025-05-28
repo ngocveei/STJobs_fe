@@ -1,0 +1,300 @@
+ <!-- Stats Section -->
+    <section class="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <h3>Development & IT</h3>
+            <div class="stat-rating">
+              <i class="fas fa-star"></i>
+              <span class="rating">4.85/5</span>
+              <span class="skills">1853 skills</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <h3>AI Services</h3>
+            <div class="stat-rating">
+              <i class="fas fa-star"></i>
+              <span class="rating">4.8/5</span>
+              <span class="skills">294 skills</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <h3>Design & Creative</h3>
+            <div class="stat-rating">
+              <i class="fas fa-star"></i>
+              <span class="rating">4.91/5</span>
+              <span class="skills">968 skills</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <h3>Sales & Marketing</h3>
+            <div class="stat-rating">
+              <i class="fas fa-star"></i>
+              <span class="rating">4.77/5</span>
+              <span class="skills">392 skills</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <h3>Writing & Translation</h3>
+            <div class="stat-rating">
+              <i class="fas fa-star"></i>
+              <span class="rating">4.92/5</span>
+              <span class="skills">505 skills</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <h3>Admin & Customer Support</h3>
+            <div class="stat-rating">
+              <i class="fas fa-star"></i>
+              <span class="rating">4.77/5</span>
+              <span class="skills">508 skills</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <h3>Finance & Accounting</h3>
+            <div class="stat-rating">
+              <i class="fas fa-star"></i>
+              <span class="rating">4.79/5</span>
+              <span class="skills">214 skills</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <h3>Engineering & Architecture</h3>
+            <div class="stat-rating">
+              <i class="fas fa-star"></i>
+              <span class="rating">4.85/5</span>
+              <span class="skills">650 skills</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    .stat-card {
+    position: absolute;
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stat-card-1 {
+    top: -1rem;
+    left: -1rem;
+}
+
+.stat-card-2 {
+    bottom: -1rem;
+    right: -1rem;
+}
+
+.stat-card i {
+    color: #22c55e;
+    font-size: 1.25rem;
+}
+
+.stat-number {
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+    .hover-overlay1 {
+  position: absolute;
+  inset: 0;
+  background: rgba(211, 214, 221, 11); /* Màu D3D6DD có độ mờ nhẹ */
+  color: #000; /* Màu chữ đen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 1rem;
+  z-index: 1;
+}
+
+
+
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.875rem;
+}
+
+.btn-primary {
+    /* background-color: #354F6C; */
+    color: #354F6C;
+    border: 2px solid #354F6C;
+}
+
+.btn-primary:hover {
+    background-color: #031F4A;
+    color: #D3D6DD;
+    /* border-color: #16a34a; */
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+  --primary-color: #1e3a8a;
+  --background-color: #f3f4f6;
+  --card-color: #ffffff;
+  --text-color: #1f2937;
+  --highlight-color: #10b981;
+  --danger-color: #ef4444;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  background-color: #031F4A;
+  color: white;
+  width: 250px;
+  padding: 1rem;
+}
+
+.sidebar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  display: inline-block;
+  background-color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  line-height: 1;
+}
+
+.logo-link {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #031F4A;
+}
+
+.logo-dot {
+  color: #D3D6DD;
+}
+
+.sidebar-menu a {
+  display: flex;
+  margin-bottom: 1rem;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-toggle {
+  all: unset; /* Reset toàn bộ kiểu mặc định của button */
+  display: block;
+  margin-bottom: 1rem;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 4px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdown-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-menu a,
+.dropdown-toggle {
+  display: block;
+  margin-bottom: 1rem;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  padding-left: 1rem;
+}
+
+.dropdown-menu a {
+  font-weight: normal;
+  padding: 0.25rem 0;
+  color: #cbd5e1;
+}
+
+.dropdown-menu a:hover {
+  color: white;
+}
+
+.dropdown.open .dropdown-menu {
+  display: flex;
+}
+
+.main {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+/* styles.css */
+
+:root {
+  --primary-color: #1e3a8a;
+  --background-color: #f3f4f6;
+  --card-color: #ffffff;
+  --text-color: #1f2937;
+  --highlight-color: #10b981;
+  --danger-color: #ef4444;
+}
