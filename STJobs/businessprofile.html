@@ -1,0 +1,208 @@
+<!-- profile gốc -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Profile</title>
+    <link rel="stylesheet" href="businessprofilest.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="logo" style="margin-bottom: 2rem">
+          <a href="#" class="logo-link">
+            STJobs<span class="logo-dot">.</span>
+          </a>
+        </div>
+        <nav class="sidebar-menu">
+          <a href="#" style="font-weight: bold">Dashboard</a>
+          <a href="#" style="font-weight: bold">Calendar</a>
+          <div class="dropdown">
+            <button
+              class="dropdown-toggle"
+              onclick="toggleDropdown(this)"
+              style="font-weight: bold"
+            >
+              Profile ▾
+            </button>
+            <div class="dropdown-menu">
+              <a href="#">My Profile</a>
+              <a href="#">Freelancers</a>
+              <a href="#">Companies</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button
+              class="dropdown-toggle"
+              onclick="toggleDropdown(this)"
+              style="font-weight: bold"
+            >
+              Customer Management ▾
+            </button>
+            <div class="dropdown-menu">
+              <a href="#">Freelancers</a>
+              <a href="#">Companies</a>
+            </div>
+          </div>
+          <a href="#" style="font-weight: bold">Project Management</a>
+          <a href="#" style="font-weight: bold">Applications</a>
+          <a href="#" style="font-weight: bold">Payments</a>
+          <a href="#" style="font-weight: bold">Reviews & Reports</a>
+          <a href="#" style="font-weight: bold">System Settings</a>
+        </nav>
+      </aside>
+
+      <main class="main">
+        <div class="topbar">
+          <h1>Companies Profile</h1>
+          <input type="text" placeholder="Search company..." />
+          <div class="breadcrumb">
+            <span>Profile</span> /
+            <span class="current">Companies</span>
+          </div>
+          <div class="user-info">
+            <div>
+              <p class="user-name">Thomas Anree</p>
+              <p class="user-role">Admin</p>
+            </div>
+            <img src="https://i.pravatar.cc/40" alt="avatar" class="avatar" />
+          </div>
+        </div>
+
+        <div class="freelancer-grid">
+          <!-- Freelancer 1 -->
+          <div class="freelancer-card">
+            <section class="profile-header">
+              <img
+                src="https://i.pravatar.cc/100?u=company1"
+                alt="Company Logo"
+                class="avatar-large"
+              />
+              <div class="basic-info">
+                <h2>ABC Tech Co., Ltd</h2>
+                <p>Status: <span class="status-active">Hiring</span></p>
+                <p>📍 District 1, Ho Chi Minh City</p>
+              </div>
+            </section>
+            <section class="profile-section">
+              <h3>General Information</h3>
+              <ul>
+                <li><strong>Industry:</strong> Software Development</li>
+                <li><strong>Company Size:</strong> 50-100 employees</li>
+                <li><strong>Email:</strong> contact@abctech.com</li>
+              </ul>
+            </section>
+            <section class="profile-section">
+              <h3>Hiring Needs</h3>
+              <ul>
+                <li>React Developer</li>
+                <li>QA Engineer</li>
+              </ul>
+            </section>
+          </div>
+
+          <!-- Company 2 -->
+          <div class="freelancer-card">
+            <section class="profile-header">
+              <img
+                src="https://i.pravatar.cc/100?u=company2"
+                alt="Company Logo"
+                class="avatar-large"
+              />
+              <div class="basic-info">
+                <h2>GreenMedia JSC</h2>
+                <p>
+                  Status:
+                  <span class="status-active">Open for partnership</span>
+                </p>
+                <p>📍 Hanoi, Vietnam</p>
+              </div>
+            </section>
+            <section class="profile-section">
+              <h3>General Information</h3>
+              <ul>
+                <li><strong>Industry:</strong> Digital Marketing</li>
+                <li><strong>Company Size:</strong> 20-30 employees</li>
+                <li><strong>Email:</strong> hello@greenmedia.vn</li>
+              </ul>
+            </section>
+            <section class="profile-section">
+              <h3>Hiring Needs</h3>
+              <ul>
+                <li>Content Writer</li>
+                <li>Graphic Designer</li>
+              </ul>
+            </section>
+          </div>
+
+          <!-- Company 3 -->
+          <div class="freelancer-card">
+            <section class="profile-header">
+              <img
+                src="https://i.pravatar.cc/100?u=company3"
+                alt="Company Logo"
+                class="avatar-large"
+              />
+              <div class="basic-info">
+                <h2>LogiPro Logistics</h2>
+                <p>Status: <span class="status-inactive">Not hiring</span></p>
+                <p>📍 Da Nang, Vietnam</p>
+              </div>
+            </section>
+            <section class="profile-section">
+              <h3>General Information</h3>
+              <ul>
+                <li><strong>Industry:</strong> Logistics & Supply Chain</li>
+                <li><strong>Company Size:</strong> 200+ employees</li>
+                <li><strong>Email:</strong> info@logipro.vn</li>
+              </ul>
+            </section>
+            <section class="profile-section">
+              <h3>Recent Projects</h3>
+              <p>Smart warehouse automation project (2023)</p>
+            </section>
+          </div>
+
+          <!-- Company 4 -->
+          <div class="freelancer-card">
+            <section class="profile-header">
+              <img
+                src="https://i.pravatar.cc/100?u=company4"
+                alt="Company Logo"
+                class="avatar-large"
+              />
+              <div class="basic-info">
+                <h2>VinaFoods Group</h2>
+                <p>Status: <span class="status-active">Hiring Interns</span></p>
+                <p>📍 Can Tho, Vietnam</p>
+              </div>
+            </section>
+            <section class="profile-section">
+              <h3>General Information</h3>
+              <ul>
+                <li><strong>Industry:</strong> Food Manufacturing</li>
+                <li><strong>Company Size:</strong> 500+ employees</li>
+                <li><strong>Email:</strong> careers@vinafoods.vn</li>
+              </ul>
+            </section>
+            <section class="profile-section">
+              <h3>Internship Opportunities</h3>
+              <ul>
+                <li>Food Quality Analyst Intern</li>
+                <li>Production Planning Intern</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script>
+      function toggleDropdown(button) {
+        const dropdown = button.closest(".dropdown");
+        dropdown.classList.toggle("open");
+      }
+    </script>
+  </body>
+</html>

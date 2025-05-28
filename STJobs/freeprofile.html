@@ -1,0 +1,443 @@
+<!-- profile gốc -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freelancer Profile</title>
+    <link rel="stylesheet" href="freeprofilest.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="logo" style="margin-bottom: 2rem">
+          <a href="#" class="logo-link">
+            STJobs<span class="logo-dot">.</span>
+          </a>
+        </div>
+        <nav class="sidebar-menu">
+          <a href="#" style="font-weight: bold">Dashboard</a>
+          <a href="#" style="font-weight: bold">Calendar</a>
+          <div class="dropdown">
+            <button
+              class="dropdown-toggle"
+              onclick="toggleDropdown(this)"
+              style="font-weight: bold"
+            >
+              Profile ▾
+            </button>
+            <div class="dropdown-menu">
+              <a href="#">My Profile</a>
+              <a href="#">Freelancers</a>
+              <a href="#">Companies</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button
+              class="dropdown-toggle"
+              onclick="toggleDropdown(this)"
+              style="font-weight: bold"
+            >
+              Customer Management ▾
+            </button>
+            <div class="dropdown-menu">
+              <a href="#">Freelancers</a>
+              <a href="#">Companies</a>
+            </div>
+          </div>
+          <a href="#" style="font-weight: bold">Project Management</a>
+          <a href="#" style="font-weight: bold">Applications</a>
+          <a href="#" style="font-weight: bold">Payments</a>
+          <a href="#" style="font-weight: bold">Reviews & Reports</a>
+          <a href="#" style="font-weight: bold">System Settings</a>
+        </nav>
+      </aside>
+
+      <main class="main">
+        <div class="topbar">
+          <h1>Freelancers Profile</h1>
+          <input type="text" placeholder="Search freelancer..." />
+          <div class="breadcrumb">
+            <span>Profile</span> /
+            <span class="current">Freelancers</span>
+          </div>
+          <div class="user-info">
+            <div>
+              <p class="user-name">Thomas Anree</p>
+              <p class="user-role">Admin</p>
+            </div>
+            <img src="https://i.pravatar.cc/40" alt="avatar" class="avatar" />
+          </div>
+        </div>
+
+        <div class="freelancer-grid">
+          <!-- Freelancer 1 -->
+          <div class="freelancer-card">
+            <section class="profile-header">
+              <img
+                src="https://i.pravatar.cc/100?img=1"
+                alt="Avatar"
+                class="avatar-large"
+              />
+              <div class="basic-info">
+                <h2>Emily Tran</h2>
+                <p>
+                  Status: <span class="status-active">Available for work</span>
+                </p>
+                <p>📍 Ho Chi Minh City, Vietnam</p>
+              </div>
+            </section>
+            <section class="profile-section">
+              <h3>Personal Information</h3>
+              <ul>
+                <li><strong>Full Name:</strong> Emily Tran</li>
+                <li><strong>Date of Birth:</strong> Jan 12, 1996</li>
+                <li><strong>Gender:</strong> Female</li>
+                <li><strong>Country:</strong> Vietnam</li>
+                <li><strong>Address:</strong> 123 Nguyen Hue, District 1</li>
+                <li><strong>Phone:</strong> +84 123456789</li>
+                <li><strong>Email:</strong> emily@mail.com</li>
+              </ul>
+            </section>
+
+            <section class="profile-section">
+              <h3>Education & Qualifications</h3>
+              <ul>
+                <li>Bachelor of Graphic Design - FPT University (2014–2018)</li>
+                <li>UX Certification - Coursera (2022)</li>
+              </ul>
+            </section>
+
+            <section class="profile-section">
+              <h3>Work Experience</h3>
+              <ul>
+                <li>Senior UI/UX Designer at ABC Studio (2019–2023)</li>
+                <li>Freelance Designer for startups and NGOs</li>
+              </ul>
+            </section>
+
+            <section class="profile-section">
+              <h3>Hard Skills</h3>
+              <ul class="skill-list">
+                <li>Figma</li>
+                <li>Adobe XD</li>
+                <li>HTML/CSS</li>
+              </ul>
+            </section>
+
+            <section class="profile-section">
+              <h3>Soft Skills</h3>
+              <ul class="skill-list">
+                <li>Teamwork</li>
+                <li>Communication</li>
+                <li>Time Management</li>
+              </ul>
+            </section>
+
+            <section class="profile-section">
+              <h3>Project Categories</h3>
+              <p>Web Design, App UI/UX, E-learning Platforms, NGO Campaigns</p>
+            </section>
+
+            <section class="profile-section">
+              <h3>Pricing & Working Method</h3>
+              <p>💰 $20/hour or fixed price depending on project scope.</p>
+              <p>🧑‍💻 Remote, flexible working hours.</p>
+            </section>
+
+            <section class="profile-section">
+              <h3>Work Availability</h3>
+              <p>Monday - Friday: 9AM - 6PM</p>
+            </section>
+
+            <section class="profile-section">
+              <h3>Services Provided</h3>
+              <ul>
+                <li>UI/UX Design</li>
+                <li>Wireframing</li>
+                <li>Prototyping</li>
+                <li>Design Consultation</li>
+              </ul>
+            </section>
+
+            <section class="profile-section">
+              <h3>Ratings & Certificates</h3>
+              <p>⭐ 4.8/5 (Based on 50+ reviews)</p>
+              <p>🏅 Certified UX Specialist – Coursera</p>
+            </section>
+          </div>
+
+          <!-- Freelancer 2 -->
+          <div class="freelancer-card">
+            <section class="profile-header">
+              <img
+                src="https://i.pravatar.cc/100?img=2"
+                alt="Avatar"
+                class="avatar-large"
+              />
+              <div class="basic-info">
+                <h2>David Nguyen</h2>
+                <p>
+                  Status:
+                  <span class="status-active">Open to new projects</span>
+                </p>
+                <p>📍 Da Nang, Vietnam</p>
+              </div>
+            </section>
+            <section class="profile-section">
+              <h3>Personal Information</h3>
+              <ul>
+                <li><strong>Full Name:</strong> David Nguyen</li>
+                <li><strong>Date of Birth:</strong> Jul 5, 1992</li>
+                <li><strong>Gender:</strong> Male</li>
+                <li><strong>Country:</strong> Vietnam</li>
+                <li><strong>Address:</strong> 45 Le Duan Street</li>
+                <li><strong>Phone:</strong> +84 987654321</li>
+                <li><strong>Email:</strong> davidn@mail.com</li>
+              </ul>
+            </section>
+            <section class="profile-section">
+              <h3>Education & Qualifications</h3>
+              <ul>
+                <li>Bachelor of Computer Science - Duy Tan University</li>
+              </ul>
+            </section>
+            <section class="profile-section">
+              <h3>Work Experience</h3>
+              <ul>
+                <li>Backend Developer at TechHub (2017–2021)</li>
+                <li>Freelancer (2022–Present)</li>
+              </ul>
+            </section>
+            <section class="profile-section">
+              <h3>Hard Skills</h3>
+              <ul class="skill-list">
+                <li>Java</li>
+                <li>Spring Boot</li>
+                <li>MySQL</li>
+              </ul>
+            </section>
+            <section class="profile-section">
+              <h3>Soft Skills</h3>
+              <ul class="skill-list">
+                <li>Problem Solving</li>
+                <li>Adaptability</li>
+              </ul>
+            </section>
+            <section class="profile-section">
+              <h3>Project Categories</h3>
+              <p>Web Applications, APIs, Admin Dashboards</p>
+            </section>
+            <section class="profile-section">
+              <h3>Pricing & Working Method</h3>
+              <p>💰 $18/hour, remote only</p>
+            </section>
+            <section class="profile-section">
+              <h3>Work Availability</h3>
+              <p>Mon - Sat: 8AM - 5PM</p>
+            </section>
+            <section class="profile-section">
+              <h3>Services Provided</h3>
+              <ul>
+                <li>API Development</li>
+                <li>System Design</li>
+              </ul>
+            </section>
+            <section class="profile-section">
+              <h3>Ratings & Certificates</h3>
+              <p>⭐ 4.6/5</p>
+              <p>🏅 Spring Framework Expert</p>
+            </section>
+          </div>
+
+          <!-- Freelancer 3 -->
+          <div class="freelancer-card">
+            <section class="profile-header">
+              <img
+                src="https://i.pravatar.cc/100?img=3"
+                alt="Avatar"
+                class="avatar-large"
+              />
+              <div class="basic-info">
+                <h2>Lan Pham</h2>
+                <p>
+                  Status:
+                  <span class="status-inactive">Currently unavailable</span>
+                </p>
+                <p>📍 Hanoi, Vietnam</p>
+              </div>
+            </section>
+            <section class="profile-section">
+              <h3>Personal Information</h3>
+              <ul>
+                <li><strong>Full Name:</strong> Lan Pham</li>
+                <li><strong>Date of Birth:</strong> Oct 20, 1989</li>
+                <li><strong>Gender:</strong> Female</li>
+                <li><strong>Country:</strong> Vietnam</li>
+                <li><strong>Address:</strong> 23 Tran Quoc Hoan</li>
+                <li><strong>Phone:</strong> +84 888888888</li>
+                <li><strong>Email:</strong> lanpham@mail.com</li>
+              </ul>
+            </section>
+            <section class="profile-section">
+              <h3>Education & Qualifications</h3>
+              <ul>
+                <li>Master of Marketing - Foreign Trade University</li>
+              </ul>
+            </section>
+            <section class="profile-section">
+              <h3>Work Experience</h3>
+              <ul>
+                <li>Marketing Manager at VNG Corp (2015–2022)</li>
+              </ul>
+            </section>
+            <section class="profile-section">
+              <h3>Hard Skills</h3>
+              <ul class="skill-list">
+                <li>Content Strategy</li>
+                <li>SEO</li>
+                <li>Social Media Ads</li>
+              </ul>
+            </section>
+            <section class="profile-section">
+              <h3>Soft Skills</h3>
+              <ul class="skill-list">
+                <li>Leadership</li>
+                <li>Presentation</li>
+              </ul>
+            </section>
+            <section class="profile-section">
+              <h3>Project Categories</h3>
+              <p>Digital Campaigns, Brand Strategy</p>
+            </section>
+            <section class="profile-section">
+              <h3>Pricing & Working Method</h3>
+              <p>💰 $25/hour, hybrid model</p>
+            </section>
+            <section class="profile-section">
+              <h3>Work Availability</h3>
+              <p>Unavailable until Aug 2025</p>
+            </section>
+            <section class="profile-section">
+              <h3>Services Provided</h3>
+              <ul>
+                <li>Marketing Strategy</li>
+                <li>Social Media Management</li>
+              </ul>
+            </section>
+            <section class="profile-section">
+              <h3>Ratings & Certificates</h3>
+              <p>⭐ 4.9/5</p>
+              <p>🏅 Google Ads Certified</p>
+            </section>
+          </div>
+
+          <!-- Freelancer 4 -->
+          <div class="freelancer-card">
+            <section class="profile-header">
+              <img
+                src="https://i.pravatar.cc/100?u=freelancer4"
+                alt="Avatar"
+                class="avatar-large"
+              />
+              <div class="basic-info">
+                <h2>Hoang Bui</h2>
+                <p>
+                  Status: <span class="status-active">Available for work</span>
+                </p>
+                <p>📍 Da Nang, Vietnam</p>
+              </div>
+            </section>
+            <section class="profile-section">
+              <h3>Personal Information</h3>
+              <ul>
+                <li><strong>Date of Birth:</strong> Mar 22, 1994</li>
+                <li><strong>Gender:</strong> Male</li>
+                <li><strong>Country:</strong> Vietnam</li>
+                <li><strong>Address:</strong> 78 Tran Hung Dao, Da Nang</li>
+                <li><strong>Phone:</strong> +84 987654321</li>
+                <li><strong>Email:</strong> hoangbui@mail.com</li>
+              </ul>
+            </section>
+
+            <section class="profile-section">
+              <h3>Education & Qualifications</h3>
+              <ul>
+                <li>BSc in Computer Science – HUST (2012–2016)</li>
+                <li>Fullstack Web Developer Bootcamp – CodeGym (2020)</li>
+              </ul>
+            </section>
+
+            <section class="profile-section">
+              <h3>Work Experience</h3>
+              <ul>
+                <li>Backend Developer at VNG Corp (2016–2020)</li>
+                <li>Freelance Fullstack Developer (2020–Present)</li>
+              </ul>
+            </section>
+
+            <section class="profile-section">
+              <h3>Hard Skills</h3>
+              <ul class="skill-list">
+                <li>Java</li>
+                <li>Spring Boot</li>
+                <li>MySQL</li>
+                <li>ReactJS</li>
+              </ul>
+            </section>
+
+            <section class="profile-section">
+              <h3>Soft Skills</h3>
+              <ul class="skill-list">
+                <li>Problem Solving</li>
+                <li>Team Collaboration</li>
+                <li>Agile Mindset</li>
+              </ul>
+            </section>
+
+            <section class="profile-section">
+              <h3>Project Categories</h3>
+              <p>
+                Enterprise Applications, APIs, E-commerce Platforms, CRM Systems
+              </p>
+            </section>
+
+            <section class="profile-section">
+              <h3>Pricing & Working Method</h3>
+              <p>💰 $25/hour or milestone-based pricing</p>
+              <p>📍 Remote or hybrid onsite in Da Nang</p>
+            </section>
+
+            <section class="profile-section">
+              <h3>Work Availability</h3>
+              <p>Monday to Saturday, 9AM – 7PM</p>
+            </section>
+
+            <section class="profile-section">
+              <h3>Services Provided</h3>
+              <ul>
+                <li>API Development</li>
+                <li>Database Design</li>
+                <li>Bug Fixing & Optimization</li>
+                <li>React-based Admin Panels</li>
+              </ul>
+            </section>
+
+            <section class="profile-section">
+              <h3>Ratings & Certificates</h3>
+              <p>⭐ 4.9/5 (based on 75+ reviews)</p>
+              <p>🎓 Certified Spring Developer – JetBrains Academy</p>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script>
+      function toggleDropdown(button) {
+        const dropdown = button.closest(".dropdown");
+        dropdown.classList.toggle("open");
+      }
+    </script>
+  </body>
+</html>
