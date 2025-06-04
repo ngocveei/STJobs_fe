@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="homest.css" />
+
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>STJobs - Nơi kết nối sinh viên và doanh nghiệp</title>
-    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="homest.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,20 +16,129 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #fff;
+        color: #333;
+      }
+
+      .header {
+        background-color: white;
+        border-bottom: 1px solid #e5e7eb;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 4rem;
+      }
+
+      .logo-link {
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #031f4a;
+      }
+
+      .logo-dot {
+        color: #d3d6dd;
+      }
+
+      .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        position: relative;
+      }
+
+      .nav-item {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        cursor: pointer;
+        color: #6b7280;
+        font-weight: 500;
+        position: relative;
+      }
+
+      .nav-item:hover {
+        color: #031f4a;
+      }
+
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        padding: 10px;
+        border-radius: 6px;
+        min-width: 200px;
+      }
+
+      .dropdown-menu a {
+        display: block;
+        padding: 8px 12px;
+        color: #333;
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      .dropdown-menu a:hover {
+        background-color: #f0f0f0;
+      }
+
+      .new-label {
+        background-color: #ff4757;
+        color: white;
+        font-size: 10px;
+        padding: 2px 6px;
+        border-radius: 12px;
+        margin-left: 4px;
+      }
+
+      .btn-primary {
+        background-color: white;
+        color: #354f6c;
+        border: 2px solid #354f6c;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      .btn-primary:hover {
+        background-color: #031f4a;
+        color: #d3d6dd;
+      }
+    </style>
   </head>
   <body>
-    <!-- Header -->
     <header class="header">
       <nav class="nav">
         <div class="nav-container">
-          <!-- Logo -->
           <div class="logo">
             <a href="#" class="logo-link">
               STJobs<span class="logo-dot">.</span>
             </a>
           </div>
 
-          <!-- Navigation Menu -->
           <div class="nav-menu">
             <div class="nav-item dropdown explore-dropdown">
               <span>Find talent</span>
@@ -44,19 +153,23 @@
                 <a href="#">Engineering & Architecture</a>
               </div>
             </div>
+
             <div class="nav-item dropdown">
               <span>Enterprise</span>
-              <!-- <i class="fas fa-chevron-down"></i> -->
             </div>
-            <div class="nav-item dropdown explore-dropdown">
+
+            <div
+              class="nav-item dropdown explore-dropdown"
+              id="exploreDropdownBtn"
+            >
               <span>Explore</span>
               <i class="fas fa-chevron-down"></i>
-              <div class="dropdown-menu">
+              <div class="dropdown-menu" id="exploreDropdownMenu">
                 <a href="#">STJobs VIP <span class="new-label">New</span></a>
                 <a href="#">Answers</a>
                 <a href="#">Community</a>
                 <a href="#">Guides</a>
-                <a href="#">Podcast</a>
+                <a href="#">Report</a>
                 <a href="#">Learn</a>
                 <a href="#">Blog</a>
                 <a href="#">Logo Maker</a>
@@ -66,9 +179,58 @@
                         <i class="fas fa-globe"></i>
                         <span>EN</span>
                     </div> -->
-
+            <a href="#" class="nav-link">About STJobs</a>
             <a href="#" class="nav-link">Sign in</a>
             <button class="btn btn-primary">Join</button>
+
+            <!-- Bên trong .nav-menu -->
+            <div class="nav-user-actions">
+              <!-- Chuông -->
+              <div class="notification-wrapper">
+                <div class="notification-icon" id="notificationBell">
+                  <i class="fas fa-bell"></i>
+                  <span class="notification-dot" id="notificationDot"></span>
+                </div>
+
+                <!-- Dropdown thông báo -->
+                <div class="notification-dropdown" id="notificationDropdown">
+                  <div class="notification-header">
+                    <strong>Thông báo</strong>
+                  </div>
+                  <div class="notification-list">
+                    <div class="notification-item">
+                      <img src="https://i.pravatar.cc/40" />
+                      <div class="notification-text">
+                        <p>
+                          <strong>Trần Hoàng Anh</strong> vừa cập nhật lại thông
+                          tin
+                        </p>
+                        <span class="time">53 phút trước</span>
+                      </div>
+                    </div>
+                    <div class="notification-item">
+                      <img src="https://i.pravatar.cc/41" />
+                      <div class="notification-text">
+                        <p><strong>Mega market</strong> vừa đăng bài</p>
+                        <span class="time">1 ngày trước</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="notification-footer">
+                    <button>Xem tất cả thông báo</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Avatar -->
+              <a href="/myprofile.html" class="avatar-wrapper">
+                <img
+                  src="https://i.pravatar.cc/36"
+                  alt="Avatar"
+                  class="avatar-img"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </nav>
@@ -231,11 +393,6 @@
                 alt="Website Development"
               />
             </div>
-            <!-- Tooltip -->
-            <div class="hover-overlay">
-              Lương: 15-20 triệu/tháng<br />
-              Số lượng: 124 jobs
-            </div>
           </div>
           <div class="service-card pink">
             <div class="card-content">
@@ -246,10 +403,6 @@
                 src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
                 alt="Video Editing"
               />
-            </div>
-            <div class="hover-overlay1">
-              Lương: 15-20 triệu/tháng<br />
-              Số lượng: 124 jobs
             </div>
           </div>
           <div class="service-card orange">
@@ -262,10 +415,6 @@
                 alt="Software Development"
               />
             </div>
-            <div class="hover-overlay">
-              Lương: 15-20 triệu/tháng<br />
-              Số lượng: 124 jobs
-            </div>
           </div>
           <div class="service-card teal">
             <div class="card-content">
@@ -276,10 +425,6 @@
                 src="https://images.unsplash.com/photo-1432888622747-4eb9a8c2b156?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
                 alt="SEO"
               />
-            </div>
-            <div class="hover-overlay1">
-              Lương: 15-20 triệu/tháng<br />
-              Số lượng: 124 jobs
             </div>
           </div>
           <div class="service-card purple">
@@ -292,10 +437,6 @@
                 alt="Architecture & Interior Design"
               />
             </div>
-            <div class="hover-overlay">
-              Lương: 15-20 triệu/tháng<br />
-              Số lượng: 124 jobs
-            </div>
           </div>
           <div class="service-card yellow">
             <div class="card-content">
@@ -306,15 +447,6 @@
                 src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
                 alt="Book Design"
               />
-            </div>
-            <div class="hover-overlay1">
-              Lương: 15-20 triệu/tháng<br />
-              Số lượng: 124 jobs
-              <div class="stat-rating">
-                <i class="fas fa-star"></i>
-                <span class="rating">4.85/5</span>
-                <span class="skills">650 skills</span>
-              </div>
             </div>
           </div>
         </div>
@@ -498,5 +630,57 @@
     </footer>
 
     <script src="src/main.ts" type="module"></script>
+    <script src="src/main.ts" type="module"></script>
+    <script>
+    // Hiển thị chấm đỏ nếu có thông báo mới
+    const hasNotification = true;
+    const bell = document.getElementById("notificationBell");
+    const dropdown = document.getElementById("notificationDropdown");
+    const dot = document.getElementById("notificationDot");
+
+    if (hasNotification) {
+      dot.style.display = "block";
+    }
+
+    bell.addEventListener("click", function (e) {
+      e.stopPropagation();
+      const isOpen = dropdown.style.display === "block";
+      dropdown.style.display = isOpen ? "none" : "block";
+
+      //  Ẩn dấu đỏ sau khi mở dropdown
+      if (!isOpen) {
+        dot.style.display = "none";
+      }
+    });
+
+    document.addEventListener("click", function () {
+      dropdown.style.display = "none";
+    });
+
+    // Dropdown Explore
+    const exploreBtn = document.getElementById("exploreDropdownBtn");
+    const exploreMenu = document.getElementById("exploreDropdownMenu");
+    let exploreTimeout;
+
+    exploreBtn.addEventListener("mouseenter", () => {
+      clearTimeout(exploreTimeout);
+      exploreMenu.style.display = "block";
+    });
+
+    exploreBtn.addEventListener("mouseleave", () => {
+      exploreTimeout = setTimeout(() => {
+        exploreMenu.style.display = "none";
+      }, 200);
+    });
+
+    exploreMenu.addEventListener("mouseenter", () => {
+      clearTimeout(exploreTimeout);
+      exploreMenu.style.display = "block";
+    });
+
+    exploreMenu.addEventListener("mouseleave", () => {
+      exploreMenu.style.display = "none";
+    });
+  </script>
   </body>
 </html>
