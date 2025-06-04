@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Báo cáo sự cố / Gian lận</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="reportst.css" />
+</head>
+<body>
+  <div class="report-container">
+    <h1><i class="fas fa-flag"></i> Báo cáo </h1>
+    <form id="reportForm">
+      <label for="fullname">Họ tên</label>
+      <input type="text" id="fullname" name="fullname" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="role">Vai trò</label>
+      <select id="role" name="role" required>
+        <option value="">-- Chọn vai trò --</option>
+        <option value="student">Học sinh</option>
+        <option value="business">Doanh nghiệp</option>
+      </select>
+
+      <label for="type">Loại báo cáo</label>
+      <select id="type" name="type" required>
+        <option value="fraud">Gian lận / Lừa đảo</option>
+        <option value="technical">Sự cố kỹ thuật</option>
+        <option value="spam">Spam / Tin giả</option>
+        <option value="other">Khác</option>
+      </select>
+
+      <label for="description">Mô tả chi tiết</label>
+      <textarea id="description" name="description" required placeholder="Vui lòng mô tả chi tiết vấn đề bạn gặp phải..."></textarea>
+
+      <label for="evidence">Tệp minh chứng (tùy chọn)</label>
+      <input type="file" id="evidence" name="evidence" accept="image/*,.pdf,.docx" />
+
+      <label for="link">Liên kết liên quan (tùy chọn)</label>
+      <input type="url" id="link" name="link" placeholder="https://example.com" />
+
+      <button type="submit" class="submit-btn">Gửi báo cáo</button>
+      <div class="success-message" id="successMsg">Cảm ơn bạn đã gửi báo cáo. Chúng tôi sẽ xử lý trong vòng 24-48h.</div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("reportForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("successMsg").style.display = "block";
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>

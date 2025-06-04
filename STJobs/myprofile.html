@@ -1,0 +1,123 @@
+<!-- profile gốc -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile</title>
+    <link rel="stylesheet" href="myprofilest.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="logo" style="margin-bottom: 2rem">
+          <a href="#" class="logo-link">
+            STJobs<span class="logo-dot">.</span>
+          </a>
+        </div>
+        <nav class="sidebar-menu">
+          <a href="#" style="font-weight: bold">Dashboard</a>
+          <a href="#" style="font-weight: bold">Calendar</a>
+          <div class="dropdown">
+            <button
+              class="dropdown-toggle"
+              onclick="toggleDropdown(this)"
+              style="font-weight: bold"
+            >
+              Profile ▾
+            </button>
+            <div class="dropdown-menu">
+              <a href="#">My Profile</a>
+              <a href="#">Students</a>
+              <a href="#">Business</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button
+              class="dropdown-toggle"
+              onclick="toggleDropdown(this)"
+              style="font-weight: bold"
+            >
+              Customer Management ▾
+            </button>
+            <div class="dropdown-menu">
+              <a href="#">Students</a>
+              <a href="#">Business</a>
+            </div>
+          </div>
+          <a href="#" style="font-weight: bold">Project Management</a>
+          <a href="#" style="font-weight: bold">Applications</a>
+          <a href="#" style="font-weight: bold">Payments</a>
+          <a href="#" style="font-weight: bold">Reviews & Reports</a>
+          <a href="#" style="font-weight: bold">System Settings</a>
+        </nav>
+      </aside>
+
+      <main class="main">
+        <div class="topbar">
+          <h1>My Profile</h1>
+          <input type="text" placeholder="Search freelancer..." />
+          <div class="breadcrumb">
+            <span>Profile</span> /
+            <span class="current">My Profile</span>
+          </div>
+          <div class="user-info">
+            <div>
+              <p class="user-name">Thomas Anree</p>
+              <p class="user-role">Admin</p>
+            </div>
+            <img src="https://i.pravatar.cc/40" alt="avatar" class="avatar" />
+          </div>
+        </div>
+
+        <div class="admin-profile">
+          <section class="profile-section">
+            <h2>Personal Information</h2>
+            <ul>
+              <li><strong>Full Name:</strong> Thomas Anree</li>
+              <li><strong>Email:</strong> admin@stjobs.com</li>
+              <li><strong>Phone:</strong> +84 987654321</li>
+              <li><strong>Role:</strong> Administrator</li>
+              <li><strong>Joined:</strong> Jan 5, 2022</li>
+            </ul>
+          </section>
+
+          <section class="profile-section">
+            <h2>System Information</h2>
+            <ul>
+              <li><strong>Total Users Managed:</strong> 1250</li>
+              <li><strong>System Access Level:</strong> Super Admin</li>
+              <li><strong>Last Login:</strong> May 28, 2025, 07:00 AM</li>
+            </ul>
+          </section>
+
+          <section class="profile-section">
+            <h2>Activity Logs</h2>
+            <ul>
+              <li>✅ Reviewed 15 project applications this week</li>
+              <li>✅ Updated system settings</li>
+              <li>✅ Banned 2 users for policy violations</li>
+            </ul>
+          </section>
+
+          <section class="profile-section">
+            <h2>Security Settings</h2>
+            <ul>
+              <li><strong>Password Last Changed:</strong> Mar 15, 2025</li>
+              <li><strong>Two-Factor Auth:</strong> Enabled</li>
+              <li><strong>Session Timeout:</strong> 30 minutes</li>
+            </ul>
+            <button class="action-btn">🔐 Update Security Settings</button>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script>
+      function toggleDropdown(button) {
+        const dropdown = button.closest(".dropdown");
+        dropdown.classList.toggle("open");
+      }
+    </script>
+  </body>
+</html>

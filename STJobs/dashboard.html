@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dashboardst.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <!-- <h1 class="sidebar-title">STJobs</h1> -->
+        <div class="logo" style="margin-bottom: 2rem">
+          <a href="#" class="logo-link">
+            STJobs<span class="logo-dot">.</span>
+          </a>
+        </div>
+        <nav class="sidebar-menu">
+          <a href="#" style="font-weight: bold">Dashboard</a>
+          <a href="#" style="font-weight: bold">Calendar</a>
+          <div class="dropdown">
+            <button
+              class="dropdown-toggle"
+              onclick="toggleDropdown(this)"
+              style="font-weight: bold"
+            >
+              Profile ▾
+            </button>
+            <div class="dropdown-menu">
+              <a href="#">My Profile</a>
+              <a href="#">Students</a>
+              <a href="#">Business</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button
+              class="dropdown-toggle"
+              onclick="toggleDropdown(this)"
+              style="font-weight: bold"
+            >
+              Customer Management ▾
+            </button>
+            <div class="dropdown-menu">
+              <a href="#">Students</a>
+              <a href="#">Business</a>
+            </div>
+          </div>
+          <a href="#" style="font-weight: bold">Project Management</a>
+          <a href="#" style="font-weight: bold">Applications</a>
+          <a href="#" style="font-weight: bold">Payments</a>
+          <a href="#" style="font-weight: bold">Reviews & Reports</a>
+          <a href="#" style="font-weight: bold">System Settings</a>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <div class="header">
+          <h1>Dashboard</h1>
+          <div class="header-actions">
+            <select>
+              <option value="weekly">Weekly</option>
+              <option value="monthly">Monthly</option>
+              <option value="yearly">Yearly</option>
+            </select>
+            <img src="https://i.pravatar.cc/40" alt="avatar" class="avatar" />
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-grid">
+          <div class="card">
+            <p class="card-label">Registered Customers</p>
+            <h2 class="card-value">470</h2>
+            <a href="#" class="card-link">View details</a>
+            <div id="customerModal" class="modal">
+              <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>Customer Details</h2>
+                <ul>
+                  <li>👨‍🎓 Student: 320</li>
+                  <li>🏢 Business: 150</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <p class="card-label">Website Traffic</p>
+            <h2 class="card-value">12,368</h2>
+            <p class="card-trend up">↑ 8,7%</p>
+          </div>
+          <div class="card">
+            <p class="card-label">Projects</p>
+            <h2 class="card-value">36</h2>
+            <p class="card-sub">↑ 15 Up &nbsp;&nbsp; 8 Done</p>
+          </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="charts-grid">
+          <div class="chart-card">
+            <p class="card-label">Registrations</p>
+            <canvas id="registrationsChart"></canvas>
+          </div>
+          <div class="chart-card">
+            <p class="card-label">Revenue</p>
+            <h2 class="card-value">$6,540</h2>
+            <p class="card-trend up">↑ 4,1%</p>
+            <canvas id="revenueChart"></canvas>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js"></script>
+    <script>
+      const modal = document.getElementById("customerModal");
+      const link = document.querySelector(".card-link");
+      const closeBtn = document.querySelector(".close-btn");
+
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        modal.style.display = "block";
+      });
+
+      closeBtn.onclick = () => (modal.style.display = "none");
+      window.onclick = (e) => {
+        if (e.target === modal) modal.style.display = "none";
+      };
+    </script>
+  </body>
+</html>

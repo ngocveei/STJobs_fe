@@ -1,0 +1,240 @@
+/* === Dashboard CSS === */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #0f172a;
+  color: #fff;
+}
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  background-color: #031F4A;
+  color: white;
+  width: 250px;
+  padding: 1rem;
+}
+
+.sidebar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  display: inline-block;
+  background-color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  line-height: 1;
+}
+
+.logo-link {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #031F4A;
+}
+
+.logo-dot {
+  color: #D3D6DD;
+}
+
+.sidebar-menu a {
+  display: flex;
+  margin-bottom: 1rem;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-toggle {
+  all: unset; /* Reset toàn bộ kiểu mặc định của button */
+  display: block;
+  margin-bottom: 1rem;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 4px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdown-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-menu a,
+.dropdown-toggle {
+  display: block;
+  margin-bottom: 1rem;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  padding-left: 1rem;
+}
+
+.dropdown-menu a {
+  font-weight: normal;
+  padding: 0.25rem 0;
+  color: #cbd5e1;
+}
+
+.dropdown-menu a:hover {
+  color: white;
+}
+
+.dropdown.open .dropdown-menu {
+  display: flex;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header select {
+  background-color: #1e293b;
+  color: #fff;
+  border: 1px solid #334155;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #334155;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0; width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+}
+.modal-content {
+  background-color: #1e293b;
+  margin: 10% auto;
+  padding: 20px;
+  width: 400px;
+  border-radius: 8px;
+  color: white;
+}
+.close-btn {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background-color: #1e293b;
+  padding: 1.25rem;
+  border-radius: 10px;
+}
+
+.card-label {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  margin-bottom: 0.25rem;
+}
+
+.card-value {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.card-link {
+  font-size: 0.875rem;
+  color: #3b82f6;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+.card-trend {
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.card-trend.up {
+  color: #22c55e;
+}
+
+.card-sub {
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  color: #94a3b8;
+}
+
+/* Charts */
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.chart-card {
+  background-color: #1e293b;
+  padding: 1.25rem;
+  border-radius: 10px;
+}
+
+.chart-card canvas {
+  margin-top: 1rem;
+  width: 100%;
+  height: 200px;
+}
